@@ -97,7 +97,7 @@ try {
   console.log(`  referral_id : ${payload.referral_id ?? '(none sent)'}`);
   console.log(`  provided    : ${res.provided_fields.length} fields received`);
   console.log(`  expires_at  : ${res.expires_at}`);
-  console.log('\nEmbed not used — session_token ignored. Verify with: node list-leads.mjs --email ' + payload.customer.email);
+  console.log('\nVerify with: node list-leads.mjs --email ' + payload.customer.email);
 } catch (err) {
   if (err instanceof HellobillApiError) {
     console.error(`API error ${err.status}${err.code ? ` [${err.code}]` : ''}: ${err.message}`);
