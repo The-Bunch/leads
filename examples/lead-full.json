@@ -1,0 +1,58 @@
+{
+  "referral_id": "partner-ref-000124",
+  "customer": {
+    "type": "tenant",
+    "title": "ms",
+    "first_name": "Anya",
+    "last_name": "Haq",
+    "email": "anya.haq@example.com",
+    "phone": "+447700900123",
+    "is_primary_occupant": true
+  },
+  "occupants": [
+    {
+      "type": "tenant",
+      "title": "mr",
+      "first_name": "Ben",
+      "last_name": "Osei",
+      "email": "ben.osei@example.com"
+    }
+  ],
+  "addresses": {
+    "current": {
+      "address_line_1": "Flat 3, 92 Mill Lane",
+      "city": "Bristol",
+      "postcode": "BS1 4DJ",
+      "bedrooms": 3,
+      "number_occupants": 2,
+      "property_type": "flat"
+    },
+    "previous": {
+      "address_line_1": "8 Park View",
+      "city": "Bristol",
+      "postcode": "BS7 8AA"
+    }
+  },
+  "move": {
+    "in": {
+      "move_in_date": "2026-09-01",
+      "tenancy_start_date": "2026-09-01",
+      "tenancy_end_date": "2027-08-31",
+      "bill_type": "split"
+    },
+    "out": {
+      "move_out_date": "2026-08-31",
+      "reason": "end_of_tenancy"
+    }
+  },
+  "consent": {
+    "data_sharing_accepted": true,
+    "data_sharing_accepted_at": "2026-07-22T09:15:00Z",
+    "marketing_accepted": true
+  },
+  "context": [
+    { "name": "tenancy_stage", "type": "string", "value": "references_passed" },
+    { "name": "external_tenancy_id", "type": "string", "value": "ten_9f8e7d" },
+    { "name": "agency_branch", "type": "string", "value": "Bristol Central" }
+  ]
+}

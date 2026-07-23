@@ -1,0 +1,17 @@
+{
+  "name": "@the-bunch/leads-billos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Create HelloBill leads (Partner API sessions) headlessly via @hello-bill/node — no embed required.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "create-lead": "node create-lead.mjs",
+    "list-leads": "node list-leads.mjs"
+  },
+  "dependencies": {
+    "@hello-bill/node": "^2.8.3"
+  }
+}

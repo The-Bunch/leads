@@ -1,0 +1,17 @@
+# deps
+node_modules/
+
+# credentials — never commit
+.env
+.env.*
+!.env.example
+
+# real lead payloads (customer PII) — keep out of git; use payloads/ for live data
+payloads/
+
+# internal / non-public notes
+internal/
+
+# os / misc
+.DS_Store
+*.log

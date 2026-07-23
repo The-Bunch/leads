@@ -1,0 +1,23 @@
+{
+  "referral_id": "partner-ref-000123",
+  "customer": {
+    "type": "tenant",
+    "title": "mr",
+    "first_name": "Jordan",
+    "email": "tenant@example.com"
+  },
+  "addresses": {
+    "current": {
+      "address_line_1": "14 Clapham Road",
+      "city": "London",
+      "postcode": "SW8 2JB"
+    }
+  },
+  "move": {
+    "in": { "move_in_date": "2026-09-01" }
+  },
+  "consent": {
+    "data_sharing_accepted": true,
+    "data_sharing_accepted_at": "2026-07-22T09:15:00Z"
+  }
+}
