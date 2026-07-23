@@ -28,11 +28,17 @@ This repo is the smallest possible integration: **one authenticated POST that cr
 
 The scripts use [`@hello-bill/node`](https://www.npmjs.com/package/@hello-bill/node), the server-side SDK. OAuth2 client-credentials, token caching, single-flight refresh, retries with `Retry-After`, idempotency keys — all handled, so you never build that plumbing. The response's `session_token` / `embed_base_url` only matter if you mount the embed; for lead-sending they're ignored.
 
+## Access comes with partnership
+
+These examples talk to the live Partner API — nothing here runs without partner credentials, and we only issue those as part of a hellobill partnership: agreement in place, partner manager assigned, sandbox keys (`sb_*`) issued to your team.
+
+Reading this without credentials? **Bill OS** is the operations platform behind hellobill — leads created here are picked up by our team, who set up the customer's whole home. If your platform sits in the moving journey — lettings, estate agency, conveyancing, relocation — we should talk: [partnerships@hellobill.com](mailto:partnerships@hellobill.com).
+
 ## Quick start
 
 ```bash
 npm install
-cp .env.example .env        # add your client id + secret (sandbox: sb_*)
+cp .env.example .env        # sandbox keys (sb_*) come from your partner manager
 node create-lead.mjs examples/lead-minimal.json --dry-run   # validate only
 node create-lead.mjs examples/lead-minimal.json             # send it
 node list-leads.mjs --email tenant@example.com              # verify it landed
@@ -63,7 +69,7 @@ See `examples/lead-minimal.json` (bare minimum) and `examples/lead-full.json` (s
 
 ## Notes for integrators
 
-- **Sandbox vs live** is determined by the credential prefix (`sb_*` / `live_*`) with strict realm isolation.
+- **Credentials** are issued per partner by your partner manager — they aren't self-serve. **Sandbox vs live** is determined by the credential prefix (`sb_*` / `live_*`) with strict realm isolation.
 - **Idempotency**: the SDK sends a UUID v4 idempotency key per POST automatically; pass your own for stable retries.
 - **New tenancy → new lead.** Returning customers on a new tenancy should be sent as a fresh session with a fresh `referral_id` reference.
 - **Base URL**: use `https://partnerapi.hellobill.app/api/v1`. The npm package's built-in default (`api.hellobill.app`) is stale and does not resolve — these scripts default to the correct host.
